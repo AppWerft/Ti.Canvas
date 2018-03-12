@@ -689,9 +689,9 @@ void ViewProxy::fillRect(const FunctionCallbackInfo<Value>& args)
 	}
 	static jmethodID methodID = NULL;
 	if (!methodID) {
-		methodID = env->GetMethodID(ViewProxy::javaClass, "fillRect", "(IIII)V");
+		methodID = env->GetMethodID(ViewProxy::javaClass, "fillRect", "(FFFF)V");
 		if (!methodID) {
-			const char *error = "Couldn't find proxy method 'fillRect' with signature '(IIII)V'";
+			const char *error = "Couldn't find proxy method 'fillRect' with signature '(FFFF)V'";
 			LOGE(TAG, error);
 				titanium::JSException::Error(isolate, error);
 				return;
@@ -728,11 +728,11 @@ void ViewProxy::fillRect(const FunctionCallbackInfo<Value>& args)
 		}
 	if (!args[0]->IsNull()) {
 		Local<Number> arg_0 = args[0]->ToNumber(isolate);
-		jArguments[0].i =
-			titanium::TypeConverter::jsNumberToJavaInt(
+		jArguments[0].f =
+			titanium::TypeConverter::jsNumberToJavaFloat(
 				env, arg_0);
 	} else {
-		jArguments[0].i = NULL;
+		jArguments[0].f = NULL;
 	}
 
 	
@@ -745,11 +745,11 @@ void ViewProxy::fillRect(const FunctionCallbackInfo<Value>& args)
 		}
 	if (!args[1]->IsNull()) {
 		Local<Number> arg_1 = args[1]->ToNumber(isolate);
-		jArguments[1].i =
-			titanium::TypeConverter::jsNumberToJavaInt(
+		jArguments[1].f =
+			titanium::TypeConverter::jsNumberToJavaFloat(
 				env, arg_1);
 	} else {
-		jArguments[1].i = NULL;
+		jArguments[1].f = NULL;
 	}
 
 	
@@ -762,11 +762,11 @@ void ViewProxy::fillRect(const FunctionCallbackInfo<Value>& args)
 		}
 	if (!args[2]->IsNull()) {
 		Local<Number> arg_2 = args[2]->ToNumber(isolate);
-		jArguments[2].i =
-			titanium::TypeConverter::jsNumberToJavaInt(
+		jArguments[2].f =
+			titanium::TypeConverter::jsNumberToJavaFloat(
 				env, arg_2);
 	} else {
-		jArguments[2].i = NULL;
+		jArguments[2].f = NULL;
 	}
 
 	
@@ -779,11 +779,11 @@ void ViewProxy::fillRect(const FunctionCallbackInfo<Value>& args)
 		}
 	if (!args[3]->IsNull()) {
 		Local<Number> arg_3 = args[3]->ToNumber(isolate);
-		jArguments[3].i =
-			titanium::TypeConverter::jsNumberToJavaInt(
+		jArguments[3].f =
+			titanium::TypeConverter::jsNumberToJavaFloat(
 				env, arg_3);
 	} else {
-		jArguments[3].i = NULL;
+		jArguments[3].f = NULL;
 	}
 
 	jobject javaProxy = proxy->getJavaObject();

@@ -12,6 +12,8 @@ import org.appcelerator.kroll.KrollModule;
 import org.appcelerator.kroll.annotations.Kroll;
 import org.appcelerator.titanium.TiApplication;
 
+import android.graphics.Paint;
+
 @Kroll.module(name = "Canvas", id = "ti.canvas")
 public class CanvasModule extends KrollModule {
 	// Module constants
@@ -21,7 +23,6 @@ public class CanvasModule extends KrollModule {
 	public static final int VERTEX_MODE_TRIANGLES_FAN = 1;
 	@Kroll.constant
 	public static final int VERTEX_MODE_TRIANGLES_STRIP = 2;
-
 	// Constructor
 	public CanvasModule() {
 		super();

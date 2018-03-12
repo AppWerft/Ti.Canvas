@@ -330,7 +330,7 @@ public class ViewProxy extends TiViewProxy {
 	}
 
 	@Kroll.method
-	void fillRect(int x, int y, int width, int height) {
+	void fillRect(float x, float y, float width, float height) {
 		Paint.Style currentStyle = view.cView.paint.getStyle();
 		view.cView.paint.setStyle(Paint.Style.FILL);
 		view.cView.currentCanvas.drawRect(DENSITY * x, DENSITY * y, DENSITY * x
